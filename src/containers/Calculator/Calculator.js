@@ -11,7 +11,8 @@ class Calculator extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Height in cm'
+                    placeholder: 'Height in cm',
+                    label: 'Height'
                 },
                 value: '',
                 validation: {
@@ -25,7 +26,8 @@ class Calculator extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Weight in kg'
+                    placeholder: 'Weight in kg',
+                    label: 'Weight'
                 },
                 value: '',
                 validation: {
@@ -158,6 +160,7 @@ class Calculator extends Component {
                   elementType={formElement.config.elementType}
                   elementConfig={formElement.config.elementConfig}
                   value={formElement.config.value}
+                  label={formElement.config.elementConfig.label}
                   invalid={!formElement.config.valid}
                   shouldValidate={formElement.config.validation}
                   touched={formElement.config.touched}
